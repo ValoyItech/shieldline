@@ -1,0 +1,1574 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <!-- Basic Meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shield-Line Security | Professional Protection Solutions</title>
+<meta name="title" content="Shield-Line Security | Professional Protection Solutions">
+<meta name="description" content="Shield-Line Security provides 24/7 armed response, guarding, event security, and VIP protection throughout Boksburg and surrounding areas. Reliable. Professional. Always ready.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
+
+<!-- Open Graph / Social Preview -->
+<meta property="og:title" content="Shield-Line Security | Professional Protection Solutions">
+<meta property="og:description" content="Trusted security services including armed response, guarding, event security, and VIP protection. Your safety, our line of defense.">
+<meta property="og:image" content="images/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://your-domain-here.co.za">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shield-Line Security">
+<meta name="twitter:description" content="Reliable security services protecting Boksburg 24/7.">
+<meta name="twitter:image" content="images/logo.png">
+
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #101E43 0%, #2a3d6f 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-slider {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+    }
+    
+    .hero-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .hero-slide.active {
+      opacity: 1;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(16, 30, 67, 0.75) 0%, rgba(42, 61, 111, 0.75) 100%);
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    .service-card.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(16, 30, 67, 0.2);
+    }
+    
+    .specialized-card {
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+    }
+    
+    .specialized-card:nth-child(odd) {
+      transform: translateX(-50px);
+    }
+    
+    .specialized-card:nth-child(even) {
+      transform: translateX(50px);
+    }
+    
+    .specialized-card.animate-in {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .specialized-card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(16, 30, 67, 0.25);
+    }
+    
+    .service-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px 12px 0 0;
+      transition: transform 0.4s ease;
+    }
+    
+    .specialized-card:hover .service-image {
+      transform: scale(1.1);
+    }
+    
+    .image-container {
+      overflow: hidden;
+      border-radius: 12px 12px 0 0;
+    }
+    
+    .shield-icon {
+      width: 48px;
+      height: 48px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+    
+    .phone-link {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+    
+    .phone-link:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: all 0.4s ease;
+    }
+    
+    .specialized-card.animate-in .feature-item {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .specialized-card.animate-in .feature-item:nth-child(1) {
+      transition-delay: 0.2s;
+    }
+    
+    .specialized-card.animate-in .feature-item:nth-child(2) {
+      transition-delay: 0.3s;
+    }
+    
+    .specialized-card.animate-in .feature-item:nth-child(3) {
+      transition-delay: 0.4s;
+    }
+    
+    .checkmark {
+      color: #101E43;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    
+    .about-section {
+      position: relative;
+      background-image: url('images/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    
+    .about-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.92);
+    }
+    
+    .about-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    
+    .fade-in.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    @media (max-width: 768px) {
+      .about-content > div {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+      
+      .about-content div[style*="text-align: left"] {
+        text-align: center !important;
+      }
+      
+      .hero-slider {
+        height: 500px !important;
+      }
+      
+      .hero-content {
+        padding: 4rem 1.5rem !important;
+      }
+      
+      .slide-title {
+        font-size: 2rem !important;
+      }
+      
+      .slide-subtitle {
+        font-size: 1.1rem !important;
+      }
+      
+      .slide-button {
+        font-size: 1rem !important;
+        padding: 1rem 2rem !important;
+      }
+      
+      section {
+        padding: 3rem 1.5rem !important;
+      }
+      
+      h2 {
+        font-size: 2rem !important;
+        margin-bottom: 2rem !important;
+      }
+      
+      .service-card {
+        margin-bottom: 1rem;
+      }
+      
+      .specialized-card {
+        margin-bottom: 1.5rem;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+    }
+    
+    .slide-indicators {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 3;
+    }
+    
+    .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .indicator.active {
+      background: #E0E0E0;
+      width: 32px;
+      border-radius: 6px;
+    }
+    
+    .desktop-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin-left: auto;
+    }
+    
+    .desktop-nav a {
+      color: #E0E0E0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .desktop-nav a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(224, 224, 224, 0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .desktop-nav a:hover::before {
+      left: 100%;
+    }
+    
+    .desktop-nav a:hover {
+      color: #ffffff;
+      background-color: rgba(224, 224, 224, 0.15);
+      box-shadow: 0 4px 12px rgba(224, 224, 224, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    .desktop-nav a:active {
+      transform: translateY(0);
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      margin-left: auto;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+    }
+    
+    .mobile-menu-btn:hover {
+      background-color: rgba(224, 224, 224, 0.1);
+    }
+    
+    .mobile-menu-btn:active {
+      transform: scale(0.95);
+    }
+    
+    .mobile-sidebar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 320px;
+      height: 100%;
+      background-color: #101E43;
+      box-shadow: -2px 0 20px rgba(0,0,0,0.3);
+      transition: right 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+    }
+    
+    .mobile-sidebar.open {
+      right: 0;
+    }
+    
+    .mobile-sidebar-header {
+      padding: 2rem;
+      border-bottom: 1px solid rgba(224, 224, 224, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .mobile-sidebar-nav {
+      padding: 2rem;
+    }
+    
+    .mobile-sidebar-nav a {
+      display: block;
+      color: #E0E0E0;
+      text-decoration: none;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(224, 224, 224, 0.1);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .mobile-sidebar-nav a:hover {
+      color: #CFD0D2;
+    }
+    
+    .mobile-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 999;
+    }
+    
+    .mobile-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    @media (max-width: 968px) {
+      .desktop-nav {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      #header {
+        padding: 1rem 1.5rem !important;
+      }
+      
+      .header-content {
+        flex-wrap: nowrap !important;
+      }
+      
+      .header-logo-section {
+        flex: 1;
+        min-width: 0;
+      }
+      
+      .shield-icon {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 36px !important;
+      }
+      
+      #company-name {
+        font-size: 1.2rem !important;
+      }
+      
+      #tagline {
+        font-size: 0.75rem !important;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hero-slide .slide-title {
+        font-size: 2rem !important;
+      }
+      
+      .hero-slide .slide-subtitle {
+        font-size: 1.1rem !important;
+      }
+      
+      #contactForm {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+
+    /* ---------- HERO FIXES & MOBILE ENHANCEMENTS ---------- */
+.hero-slider{height:600px}                 /* keep desktop height */
+.hero-slide{
+  position:absolute;top:0;left:0;width:100%;height:100%;
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+  opacity:0;transition:opacity 1.5s ease-in-out;
+}
+.hero-slide.active{opacity:1}
+
+/* shield icon per slide */
+.slide-shield{
+  position:absolute;top:24px;left:50%;transform:translateX(-50%);
+  z-index:3;width:48px;height:48px;
+}
+.slide-shield img{width:100%;height:100%;object-fit:contain}
+
+/* content centre */
+.hero-content{
+  position:relative;z-index:2;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  padding:8rem 2rem;text-align:center;
+}
+.slide-text{max-width:900px}
+
+/* ---------- MOBILE ONLY ---------- */
+@media (max-width:768px){
+  .hero-slider{height:100vh}               /* full viewport height */
+  .hero-content{padding:4rem 1.5rem}
+  .slide-shield{width:60px;height:60px;top:20px}
+  .slide-title{font-size:2rem !important}
+  .slide-subtitle{font-size:1.1rem !important}
+  .slide-button{font-size:1rem !important;padding:1rem 2rem !important}
+
+  /* kill any tiny white gap below slider */
+  .hero-gradient{margin-bottom:-1px}
+}
+
+
+
+/* kill any tiny gap below slider on phones */
+@media (max-width: 768px) {
+  .hero-gradient{margin-bottom:-1px}
+}
+
+
+/* Prevent horizontal scroll on mobile */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+/* Optional: ensure images and media don't overflow */
+img, video, iframe, object, embed {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* ============================
+   MOBILE FULLSCREEN HERO FIX
+   ============================ */
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 100svh !important;
+  }
+
+  .hero-content {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-gradient {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* ============================
+   REMOVE BORDER / BOX EFFECT
+   ============================ */
+.hero-gradient,
+.hero-slider,
+.hero-slide {
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* ============================
+   FULL BLEED SLIDE IMAGES
+   ============================ */
+.hero-slide {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  inset: 0;
+}
+
+
+/* ---------- DESKTOP-ONLY LARGER SHIELD ---------- */
+@media (min-width: 769px) {
+  .slide-shield {               /* the shield wrapper you already have */
+    width: 100px;               /* was 48 px – make it as big as you want */
+    height: 100px;
+  }
+  .slide-shield img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body>
+  <div style="width: 100%; min-height: 100%; background-color: #F4F4F4;"><!-- Mobile Overlay -->
+   <div class="mobile-overlay" id="mobileOverlay"></div><!-- Mobile Sidebar -->
+   <nav class="mobile-sidebar" id="mobileSidebar">
+    <div class="mobile-sidebar-header">
+     <div style="display: flex; align-items: center; gap: 0.75rem;">
+    <img src="images/shield.png" 
+         alt="Shield Logo"
+         style="width: 32px; height: 32px; object-fit: contain;">
+    <span style="color: #E0E0E0; font-weight: 700; font-size: 1.2rem;">Menu</span>
+</div>
+<button class="mobile-menu-btn" id="closeSidebar" style="display: block;"> <i class="fas fa-times" style="font-size: 28px; color: #E0E0E0;"></i> </button>
+    </div>
+    <div class="mobile-sidebar-nav"><a href="#home"><i class="fas fa-home" style="margin-right: 0.75rem;"></i>Home</a> <a href="about.html"><i class="fas fa-info-circle" style="margin-right: 0.75rem;"></i>About</a> <a href="services.html"><i class="fas fa-shield-alt" style="margin-right: 0.75rem;"></i>Services</a> <a href="contact.html"><i class="fas fa-envelope" style="margin-right: 0.75rem;"></i>Contact</a>
+    </div><!-- Contact Info in Sidebar -->
+    <div style="padding: 2rem; border-top: 1px solid rgba(224, 224, 224, 0.1);">
+     <h4 style="color: #E0E0E0; font-size: 1rem; font-weight: 700; margin: 0 0 1.5rem 0;">Contact Us</h4><a href="tel:0671603859" id="sidebar-phone-link" style="display: flex; align-items: center; gap: 0.75rem; color: #CFD0D2; text-decoration: none; margin-bottom: 1rem; transition: color 0.3s ease;"> <i class="fas fa-phone" style="font-size: 18px; width: 24px;"></i> <span id="sidebar-phone">0671603859</span> </a> <a href="mailto:info@shieldline.co.za" id="sidebar-email-link" style="display: flex; align-items: center; gap: 0.75rem; color: #CFD0D2; text-decoration: none; margin-bottom: 1rem; transition: color 0.3s ease;"> <i class="fas fa-envelope" style="font-size: 18px; width: 24px;"></i> <span id="sidebar-email">info@shieldline.co.za</span> </a>
+     <div style="display: flex; align-items: center; gap: 0.75rem; color: #CFD0D2; margin-bottom: 1.5rem;"><i class="fas fa-map-marker-alt" style="font-size: 18px; width: 24px;"></i> <span id="sidebar-address">BOKSBURG NORTH</span>
+     </div><!-- Social Links -->
+     <h5 style="color: #E0E0E0; font-size: 0.9rem; font-weight: 600; margin: 0 0 1rem 0;">Follow Us</h5>
+     <div style="display: flex; gap: 1rem;"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style="width: 40px; height: 40px; background-color: rgba(224, 224, 224, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s ease; color: #E0E0E0; text-decoration: none;"> <i class="fab fa-facebook-f" style="font-size: 18px;"></i> </a> <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style="width: 40px; height: 40px; background-color: rgba(224, 224, 224, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s ease; color: #E0E0E0; text-decoration: none;"> <i class="fab fa-twitter" style="font-size: 18px;"></i> </a> <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="width: 40px; height: 40px; background-color: rgba(224, 224, 224, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s ease; color: #E0E0E0; text-decoration: none;"> <i class="fab fa-instagram" style="font-size: 18px;"></i> </a> <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style="width: 40px; height: 40px; background-color: rgba(224, 224, 224, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s ease; color: #E0E0E0; text-decoration: none;"> <i class="fab fa-linkedin-in" style="font-size: 18px;"></i> </a>
+     </div>
+    </div>
+   </nav><!-- Header -->
+   <header id="header" style="background-color: #101E43; padding: 1.5rem 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <div class="header-content" style="max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+     <div class="header-logo-section" style="display: flex; align-items: center; gap: 1rem;">
+    <img src="images/shield.png" alt="Shield Logo" 
+         style="width: 48px; height: 48px; object-fit: contain;">
+
+    <div style="min-width: 0;">
+        <h1 id="company-name" style="color: #E0E0E0; margin: 0; font-size: 1.75rem; font-weight: 700; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+            Shield-Line Security
+        </h1>
+
+        <p id="tagline" style="color: #CFD0D2; margin: 0; font-size: 0.9rem; font-weight: 400; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+            Your safety, Our line of defense.
+        </p>
+    </div>
+</div>
+
+     <nav class="desktop-nav"><a href="#home">Home</a> <a href="about.html">About</a> <a href="services.html">Services</a> <a href="contact.html">Contact</a>
+     </nav><button class="mobile-menu-btn" id="openSidebar"> <i class="fas fa-bars" style="font-size: 28px; color: #E0E0E0;"></i> </button>
+    </div>
+   </header>
+   
+
+<section class="hero-gradient" style="padding:0;text-align:center;">
+  <div class="hero-slider" id="heroSlider">
+
+    <!-- ===== SLIDE 1 ===== -->
+    <div class="hero-slide active" data-bg="images/hero1.jpg">
+      <div class="hero-overlay"></div>
+      <div class="slide-shield"><img src="images/shield.png" alt="Shield-Line Security"></div>
+      <div class="hero-content" style="padding:8rem 2rem">
+        <div style="max-width:900px;margin:0 auto">
+          <h2 class="slide-title" style="color:#E0E0E0;font-size:3.5rem;font-weight:800;margin:0 0 1rem 0;line-height:1.1">Professional Security Solutions</h2>
+          <p class="slide-subtitle" style="color:#CFD0D2;font-size:1.4rem;margin:0 0 2.5rem 0;font-weight:400">24/7 Protection You Can Trust</p>
+          <a href="tel:0671603859" class="phone-link slide-button" style="background-color:#E0E0E0;color:#101E43;padding:1.25rem 3rem;border-radius:12px;font-size:1.2rem;font-weight:700;display:inline-block;box-shadow:0 4px 12px rgba(0,0,0,0.2)">Get Protected Today</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SLIDE 2 ===== -->
+    <div class="hero-slide" data-bg="images/hero2.jpg">
+      <div class="hero-overlay"></div>
+      <div class="slide-shield"><img src="images/shield.png" alt="Shield-Line Security"></div>
+      <div class="hero-content" style="padding:8rem 2rem">
+        <div style="max-width:900px;margin:0 auto">
+          <h2 class="slide-title" style="color:#E0E0E0;font-size:3.5rem;font-weight:800;margin:0 0 1rem 0;line-height:1.1">Armed Response Teams</h2>
+          <p class="slide-subtitle" style="color:#CFD0D2;font-size:1.4rem;margin:0 0 2.5rem 0;font-weight:400">Rapid Response When Every Second Counts</p>
+          <a href="tel:0671603859" class="phone-link slide-button" style="background-color:#E0E0E0;color:#101E43;padding:1.25rem 3rem;border-radius:12px;font-size:1.2rem;font-weight:700;display:inline-block;box-shadow:0 4px 12px rgba(0,0,0,0.2)">Call Us Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SLIDE 3 ===== -->
+    <div class="hero-slide" data-bg="images/hero3.jpg">
+      <div class="hero-overlay"></div>
+      <div class="slide-shield"><img src="images/shield.png" alt="Shield-Line Security"></div>
+      <div class="hero-content" style="padding:8rem 2rem">
+        <div style="max-width:900px;margin:0 auto">
+          <h2 class="slide-title" style="color:#E0E0E0;font-size:3.5rem;font-weight:800;margin:0 0 1rem 0;line-height:1.1">Event Security Experts</h2>
+          <p class="slide-subtitle" style="color:#CFD0D2;font-size:1.4rem;margin:0 0 2.5rem 0;font-weight:400">Keeping Your Events Safe and Secure</p>
+          <a href="tel:0671603859" class="phone-link slide-button" style="background-color:#E0E0E0;color:#101E43;padding:1.25rem 3rem;border-radius:12px;font-size:1.2rem;font-weight:700;display:inline-block;box-shadow:0 4px 12px rgba(0,0,0,0.2)">Book Security</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SLIDE 4 ===== -->
+    <div class="hero-slide" data-bg="images/hero4.jpg">
+      <div class="hero-overlay"></div>
+      <div class="slide-shield"><img src="images/shield.png" alt="Shield-Line Security"></div>
+      <div class="hero-content" style="padding:8rem 2rem">
+        <div style="max-width:900px;margin:0 auto">
+          <h2 class="slide-title" style="color:#E0E0E0;font-size:3.5rem;font-weight:800;margin:0 0 1rem 0;line-height:1.1">VIP Protection Services</h2>
+          <p class="slide-subtitle" style="color:#CFD0D2;font-size:1.4rem;margin:0 0 2.5rem 0;font-weight:400">Discreet and Professional Bodyguard Services</p>
+          <a href="tel:0671603859" class="phone-link slide-button" style="background-color:#E0E0E0;color:#101E43;padding:1.25rem 3rem;border-radius:12px;font-size:1.2rem;font-weight:700;display:inline-block;box-shadow:0 4px 12px rgba(0,0,0,0.2)">Hire Bodyguards</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== INDICATORS ===== -->
+    <div class="slide-indicators">
+      <div class="indicator active" data-slide="0"></div>
+      <div class="indicator" data-slide="1"></div>
+      <div class="indicator" data-slide="2"></div>
+      <div class="indicator" data-slide="3"></div>
+    </div>
+  </div>
+</section>
+
+
+   <section class="about-section" style="padding: 5rem 2rem;">
+    <div class="about-overlay"></div>
+    <div class="about-content" style="max-width: 1200px; margin: 0 auto;">
+     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+      <div class="fade-in" style="text-align: left;">
+       <h2 id="about-title" style="color: #101E43; font-size: 2.75rem; font-weight: 700; margin: 0 0 2rem 0;">About Shield-Line Security</h2>
+       <p id="about-description" style="color: #98999E; font-size: 1.15rem; line-height: 1.8; margin: 0;">With years of experience in the security industry, Shield-Line Security provides comprehensive protection services across Boksburg and surrounding areas. Our highly trained personnel are equipped to handle any security challenge, from residential protection to large-scale event management. We pride ourselves on our rapid response times, professional conduct, and unwavering commitment to keeping our clients safe 24/7.</p>
+      </div>
+      <div class="fade-in" style="border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(16, 30, 67, 0.3);"><img src="images/about.jpg" alt="Security Team" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+      </div>
+     </div>
+    </div>
+   </section><!-- Core Services Section -->
+   <section style="padding: 5rem 2rem; background-color: #F4F4F4;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+     <h2 id="core-services-title" style="color: #101E43; font-size: 2.75rem; font-weight: 700; text-align: center; margin: 0 0 4rem 0;">Our Core Services</h2>
+     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;"><!-- Service 1 -->
+      <div class="service-card fade-in" style="background-color: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+       <div style="background-color: #101E43; width: 72px; height: 72px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+        <svg width="36" height="36" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L4 6V11C4 16.55 7.84 21.74 12 23C16.16 21.74 20 16.55 20 11V6L12 2Z" fill="#E0E0E0" /> <circle cx="12" cy="12" r="3" fill="#101E43" />
+        </svg>
+       </div>
+       <h3 id="service-1-title" style="color: #101E43; font-size: 1.6rem; font-weight: 700; margin: 0 0 1rem 0;">Armed Response</h3>
+       <p id="service-1-desc" style="color: #98999E; font-size: 1.05rem; margin: 0; line-height: 1.6;">Rapid armed response teams available 24/7 to protect your property and loved ones with immediate action.</p>
+      </div><!-- Service 2 -->
+      <div class="service-card fade-in" style="background-color: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+       <div style="background-color: #101E43; width: 72px; height: 72px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+        <svg width="36" height="36" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4" fill="#E0E0E0" /> <path d="M12 14C8 14 4 16 4 19V21H20V19C20 16 16 14 12 14Z" fill="#E0E0E0" />
+        </svg>
+       </div>
+       <h3 id="service-2-title" style="color: #101E43; font-size: 1.6rem; font-weight: 700; margin: 0 0 1rem 0;">Security Guarding</h3>
+       <p id="service-2-desc" style="color: #98999E; font-size: 1.05rem; margin: 0; line-height: 1.6;">Professional, trained security guards for your business premises, events, and residential properties.</p>
+      </div><!-- Service 3 -->
+      <div class="service-card fade-in" style="background-color: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+       <div style="background-color: #101E43; width: 72px; height: 72px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+        <svg width="36" height="36" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 11L12 14L22 4" stroke="#E0E0E0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /> <path d="M21 12V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H16" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round" />
+        </svg>
+       </div>
+       <h3 id="service-3-title" style="color: #101E43; font-size: 1.6rem; font-weight: 700; margin: 0 0 1rem 0;">Risk Assessment</h3>
+       <p id="service-3-desc" style="color: #98999E; font-size: 1.05rem; margin: 0; line-height: 1.6;">Comprehensive security evaluations to identify vulnerabilities and create tailored protection plans.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Specialized Services Section -->
+   <section style="padding: 5rem 2rem; background-color: #E0E0E0;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+     <h2 id="specialized-title" style="color: #101E43; font-size: 2.75rem; font-weight: 700; text-align: center; margin: 0 0 4rem 0;">Specialized Security Services</h2>
+     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;"><!-- Event Security -->
+      <div class="service-card specialized-card" style="background-color: #101E43; padding: 0; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <div class="image-container">
+        <img src="images/event.jpg" alt="Event Security" class="service-image"
+        onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+    </div>
+    <div style="padding: 2.5rem;">
+        <h3 id="event-title" style="color: #E0E0E0; font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem 0;">Event Security</h3>
+        <p id="event-desc" style="color: #CFD0D2; font-size: 1rem; margin: 0 0 1.5rem 0; line-height: 1.6;">
+            Comprehensive security planning and crowd control for concerts, festivals, weddings, and corporate events.
+        </p>
+
+        <div style="border-top: 1px solid rgba(224,224,224,0.2); padding-top: 1.25rem;">
+            <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span>
+                <span style="color: #CFD0D2; font-size: 0.95rem;">Guest access control</span></div>
+
+            <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span>
+                <span style="color: #CFD0D2; font-size: 0.95rem;">Perimeter patrols</span></div>
+
+            <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span>
+                <span style="color: #CFD0D2; font-size: 0.95rem;">Real-time surveillance</span></div>
+        </div>
+    </div>
+</div>
+
+ <div class="service-card specialized-card" style="background-color: #101E43; padding: 0; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <div class="image-container">
+        <img src="images/bouncer.jpg" alt="Bouncers & Doormen" class="service-image"
+        onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+    </div>
+
+    <div style="padding: 2.5rem;">
+        <h3 id="bouncers-title" style="color: #E0E0E0; font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem 0;">Bouncers & Doormen</h3>
+        <p id="bouncers-desc" style="color: #CFD0D2; font-size: 1rem; margin: 0 0 1.5rem 0; line-height: 1.6;">
+            Professional crowd management and entrance screening for clubs, bars, and private venues.
+        </p>
+
+        <div style="border-top: 1px solid rgba(224,224,224,0.2); padding-top: 1.25rem;">
+            <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span>
+                <span style="color: #CFD0D2; font-size: 0.95rem;">Conflict de-escalation</span></div>
+
+            <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span>
+                <span style="color: #CFD0D2; font-size: 0.95rem;">Dress code enforcement</span></div>
+
+            <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span>
+                <span style="color: #CFD0D2; font-size: 0.95rem;">Guest screening</span></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="service-card specialized-card" style="background-color: #101E43; padding: 0; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <div class="image-container">
+        <img src="images/bodyguards.jpg" alt="Personal Bodyguards" class="service-image"
+        onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+    </div>
+
+    <div style="padding: 2.5rem;">
+        <h3 id="bodyguard-title" style="color: #E0E0E0; font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem 0;">Personal Bodyguards</h3>
+        <p id="bodyguard-desc" style="color: #CFD0D2; font-size: 1rem; margin: 0 0 1.5rem 0; line-height: 1.6;">
+            Trusted close-protection officers for VIPs, executives, and high-profile individuals discreet and dependable.
+        </p>
+
+        <div style="border-top: 1px solid rgba(224,224,224,0.2); padding-top: 1.25rem;">
+            <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span>
+                <span style="color: #CFD0D2; font-size: 0.95rem;">Private and event protection</span></div>
+
+            <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span>
+                <span style="color: #CFD0D2; font-size: 0.95rem;">Risk awareness & route checks</span></div>
+
+            <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span>
+                <span style="color: #CFD0D2; font-size: 0.95rem;">Always alert, always ready</span></div>
+        </div>
+    </div>
+</div>
+
+      <div class="service-card specialized-card" style="background-color: #101E43; padding: 0; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+       <div class="image-container"><img src="images/escort.jpg" alt="Escort Services" class="service-image" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+       </div>
+       <div style="padding: 2.5rem;">
+        <h3 id="escort-title" style="color: #E0E0E0; font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem 0;">Escort Services</h3>
+        <p id="escort-desc" style="color: #CFD0D2; font-size: 1rem; margin: 0 0 1.5rem 0; line-height: 1.6;">Discreet personal or VIP escorts for safe travel between venues, events, or destinations.</p>
+        <div style="border-top: 1px solid rgba(224, 224, 224, 0.2); padding-top: 1.25rem;">
+         <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span> <span style="color: #CFD0D2; font-size: 0.95rem;">Route planning &amp; safety checks</span>
+         </div>
+         <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span> <span style="color: #CFD0D2; font-size: 0.95rem;">Arrival/departure monitoring</span>
+         </div>
+         <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span> <span style="color: #CFD0D2; font-size: 0.95rem;">Personalized coverage</span>
+         </div>
+        </div>
+       </div>
+      </div><!-- Surveillance & Patrols -->
+      <div class="service-card specialized-card" style="background-color: #101E43; padding: 0; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+       <div class="image-container"><img src="images/surveillance.jpg" alt="Surveillance &amp; Patrols" class="service-image" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+       </div>
+       <div style="padding: 2.5rem;">
+        <h3 id="surveillance-title" style="color: #E0E0E0; font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem 0;">Surveillance &amp; Patrols</h3>
+        <p id="surveillance-desc" style="color: #CFD0D2; font-size: 1rem; margin: 0 0 1.5rem 0; line-height: 1.6;">Regular patrols and real-time CCTV monitoring to prevent incidents before they occur.</p>
+        <div style="border-top: 1px solid rgba(224, 224, 224, 0.2); padding-top: 1.25rem;">
+         <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span> <span style="color: #CFD0D2; font-size: 0.95rem;">Visible deterrent presence</span>
+         </div>
+         <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span> <span style="color: #CFD0D2; font-size: 0.95rem;">Suspicious activity detection</span>
+         </div>
+         <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span> <span style="color: #CFD0D2; font-size: 0.95rem;">On-site coordination</span>
+         </div>
+        </div>
+       </div>
+      </div><!-- Incident Response -->
+      <div class="service-card specialized-card" style="background-color: #101E43; padding: 0; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+       <div class="image-container"><img src="images/response.jpg" alt="Incident Response" class="service-image" onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+       </div>
+       <div style="padding: 2.5rem;">
+        <h3 id="incident-title" style="color: #E0E0E0; font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem 0;">Incident Response</h3>
+        <p id="incident-desc" style="color: #CFD0D2; font-size: 1rem; margin: 0 0 1.5rem 0; line-height: 1.6;">Rapid, trained responses to disturbances or threats during any event or protection detail.</p>
+        <div style="border-top: 1px solid rgba(224, 224, 224, 0.2); padding-top: 1.25rem;">
+         <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span> <span style="color: #CFD0D2; font-size: 0.95rem;">Crowd calming procedures</span>
+         </div>
+         <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span> <span style="color: #CFD0D2; font-size: 0.95rem;">Emergency coordination</span>
+         </div>
+         <div class="feature-item"><span class="checkmark" style="color: #E0E0E0;">•</span> <span style="color: #CFD0D2; font-size: 0.95rem;">On-site reporting &amp; control</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Why Choose Us Section -->
+   <section style="padding: 5rem 2rem; background-image: url('images/bghome.jpg'); background-size: cover; background-position: center; background-attachment: fixed; position: relative;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(16, 30, 67, 0.88);"></div>
+    <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
+     <h2 class="fade-in" style="color: #E0E0E0; font-size: 2.75rem; font-weight: 700; text-align: center; margin: 0 0 4rem 0;">Why Choose Shield-Line Security?</h2>
+     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
+      <div class="fade-in" style="text-align: center; padding: 2rem;">
+       <div style="background-color: #101E43; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto;">
+        <svg width="40" height="40" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#E0E0E0" /> <path d="M2 17L12 22L22 17" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M2 12L12 17L22 12" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+       </div>
+       <h3 style="color: #E0E0E0; font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem 0;">Licensed &amp; Certified</h3>
+       <p style="color: #CFD0D2; font-size: 1rem; line-height: 1.6; margin: 0;">All our security personnel are fully licensed, trained, and certified to the highest industry standards.</p>
+      </div>
+      <div class="fade-in" style="text-align: center; padding: 2rem;">
+       <div style="background-color: #101E43; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto;">
+        <svg width="40" height="40" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="#E0E0E0" stroke-width="2" /> <path d="M12 6V12L16 14" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round" />
+        </svg>
+       </div>
+       <h3 style="color: #E0E0E0; font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem 0;">24/7 Availability</h3>
+       <p style="color: #CFD0D2; font-size: 1rem; line-height: 1.6; margin: 0;">Round-the-clock monitoring and rapid response teams ready to protect you at any time of day or night.</p>
+      </div>
+      <div class="fade-in" style="text-align: center; padding: 2rem;">
+       <div style="background-color: #101E43; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto;">
+        <svg width="40" height="40" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 7L9 18L4 13" stroke="#E0E0E0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+       </div>
+       <h3 style="color: #E0E0E0; font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem 0;">Proven Track Record</h3>
+       <p style="color: #CFD0D2; font-size: 1rem; line-height: 1.6; margin: 0;">Years of experience protecting clients across Boksburg with zero tolerance for security breaches.</p>
+      </div>
+      <div class="fade-in" style="text-align: center; padding: 2rem;">
+       <div style="background-color: #101E43; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto;">
+        <svg width="40" height="40" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round" /> <circle cx="9" cy="7" r="4" stroke="#E0E0E0" stroke-width="2" /> <path d="M23 21V19C23 17.1362 21.7252 15.5701 20 15.126" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round" /> <path d="M16 3.12598C17.7252 3.56992 19 5.13616 19 7C19 8.86384 17.7252 10.4301 16 10.874" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round" />
+        </svg>
+       </div>
+       <h3 style="color: #E0E0E0; font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem 0;">Professional Team</h3>
+       <p style="color: #CFD0D2; font-size: 1rem; line-height: 1.6; margin: 0;">Highly trained security experts with military and law enforcement backgrounds.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section style="padding: 5rem 2rem; background-color: #101E43;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+     <h2 id="contact-title" style="color: #E0E0E0; font-size: 2.75rem; font-weight: 700; text-align: center; margin: 0 0 3rem 0;">Contact Us</h2>
+     <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;"><!-- Contact Info -->
+      <div>
+       <div style="display: grid; gap: 2rem; margin-bottom: 2rem;">
+        <div style="background-color: rgba(224, 224, 224, 0.1); padding: 2rem; border-radius: 12px;"><i class="fas fa-phone" style="font-size: 40px; color: #E0E0E0; margin: 0 0 1rem 0; display: block;"></i>
+         <p style="color: #CFD0D2; font-size: 0.95rem; margin: 0 0 0.5rem 0; font-weight: 500;">Phone</p><a href="tel:0671603859" class="phone-link" id="contact-phone" style="color: #E0E0E0; font-size: 1.4rem; font-weight: 700;">0671603859</a>
+        </div>
+        <div style="background-color: rgba(224, 224, 224, 0.1); padding: 2rem; border-radius: 12px;"><i class="fas fa-envelope" style="font-size: 40px; color: #E0E0E0; margin: 0 0 1rem 0; display: block;"></i>
+         <p style="color: #CFD0D2; font-size: 0.95rem; margin: 0 0 0.5rem 0; font-weight: 500;">Email</p><a href="mailto:info@shieldline.co.za" class="phone-link" id="contact-email" style="color: #E0E0E0; font-size: 1.4rem; font-weight: 700; text-decoration: none;">info@shieldline.co.za</a>
+        </div>
+        <div style="background-color: rgba(224, 224, 224, 0.1); padding: 2rem; border-radius: 12px;"><i class="fas fa-map-marker-alt" style="font-size: 40px; color: #E0E0E0; margin: 0 0 1rem 0; display: block;"></i>
+         <p style="color: #CFD0D2; font-size: 0.95rem; margin: 0 0 0.5rem 0; font-weight: 500;">Location</p>
+         <p id="address" style="color: #E0E0E0; font-size: 1.4rem; font-weight: 700; margin: 0;">BOKSBURG NORTH</p>
+        </div>
+       </div>
+       <p style="color: #CFD0D2; font-size: 1.1rem; margin: 0; line-height: 1.6;">Available 24 hours a day, 7 days a week for emergency response and inquiries.</p>
+      </div><!-- Contact Form -->
+      <div style="background-color: rgba(255, 255, 255, 0.05); padding: 2.5rem; border-radius: 16px; backdrop-filter: blur(10px);">
+       <h3 style="color: #E0E0E0; font-size: 1.75rem; font-weight: 700; margin: 0 0 1.5rem 0;">Send Us a Message</h3>
+       <form id="contactForm" style="display: grid; gap: 1.5rem;">
+        <div><label for="name" style="display: block; color: #CFD0D2; font-size: 0.95rem; font-weight: 500; margin-bottom: 0.5rem;">Your Name</label> <input type="text" id="name" name="name" required style="width: 100%; padding: 0.875rem; border: 2px solid rgba(224, 224, 224, 0.2); border-radius: 8px; background-color: rgba(255, 255, 255, 0.1); color: #E0E0E0; font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
+        </div>
+        <div><label for="email" style="display: block; color: #CFD0D2; font-size: 0.95rem; font-weight: 500; margin-bottom: 0.5rem;">Email Address</label> <input type="email" id="email" name="email" required style="width: 100%; padding: 0.875rem; border: 2px solid rgba(224, 224, 224, 0.2); border-radius: 8px; background-color: rgba(255, 255, 255, 0.1); color: #E0E0E0; font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
+        </div>
+        <div><label for="phone" style="display: block; color: #CFD0D2; font-size: 0.95rem; font-weight: 500; margin-bottom: 0.5rem;">Phone Number</label> <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 0.875rem; border: 2px solid rgba(224, 224, 224, 0.2); border-radius: 8px; background-color: rgba(255, 255, 255, 0.1); color: #E0E0E0; font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
+        </div>
+        <div><label for="service" style="display: block; color: #CFD0D2; font-size: 0.95rem; font-weight: 500; margin-bottom: 0.5rem;">Service Interested In</label> <select id="service" name="service" required style="width: 100%; padding: 0.875rem; border: 2px solid rgba(224, 224, 224, 0.2); border-radius: 8px; background-color: rgba(255, 255, 255, 0.1); color: #E0E0E0; font-size: 1rem; outline: none; transition: border-color 0.3s ease;"> <option value="" style="background-color: #101E43;">Select a service</option> <option value="armed-response" style="background-color: #101E43;">Armed Response</option> <option value="security-guarding" style="background-color: #101E43;">Security Guarding</option> <option value="event-security" style="background-color: #101E43;">Event Security</option> <option value="bodyguard" style="background-color: #101E43;">Personal Bodyguard</option> <option value="other" style="background-color: #101E43;">Other</option> </select>
+        </div>
+        <div><label for="message" style="display: block; color: #CFD0D2; font-size: 0.95rem; font-weight: 500; margin-bottom: 0.5rem;">Message</label> <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 0.875rem; border: 2px solid rgba(224, 224, 224, 0.2); border-radius: 8px; background-color: rgba(255, 255, 255, 0.1); color: #E0E0E0; font-size: 1rem; outline: none; transition: border-color 0.3s ease; resize: vertical;"></textarea>
+        </div><button type="submit" style="background-color: #E0E0E0; color: #101E43; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease;">Send Message</button>
+        <div id="formMessage" style="display: none; padding: 1rem; border-radius: 8px; text-align: center; font-weight: 500;"></div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer style="background-color: #0a1429; padding: 4rem 2rem 2rem 2rem;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+
+        <div class="footer-grid" 
+             style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+
+            <!-- Company Info -->
+            <div>
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                    <img src="images/shield.png" 
+                         alt="Shield Logo" 
+                         style="width: 32px; height: 32px; object-fit: contain;">
+                    <span style="color: #E0E0E0; font-weight: 700; font-size: 1.3rem;">
+                        Shield-Line Security
+                    </span>
+                </div>
+
+                <!-- Tagline -->
+                <p style="color: #CFD0D2; font-size: 0.95rem; margin: 0 0 0.5rem 0;">
+                    Your safety, Our line of defense.
+                </p>
+
+                <p style="color: #98999E; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                    Providing reliable, professional security solutions for residential, commercial, and event environments across Boksburg and surrounding areas, backed by trained personnel and 24/7 readiness.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 style="color: #E0E0E0; font-size: 1.1rem; font-weight: 700; margin: 0 0 1rem 0;">Quick Links</h4>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                    <a href="#home" style="color: #98999E; text-decoration: none; font-size: 0.95rem;">Home</a>
+                    <a href="about.html" style="color: #98999E; text-decoration: none; font-size: 0.95rem;">About Us</a>
+                    <a href="services.html" style="color: #98999E; text-decoration: none; font-size: 0.95rem;">Our Services</a>
+                    <a href="contact.html" style="color: #98999E; text-decoration: none; font-size: 0.95rem;">Contact</a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 style="color: #E0E0E0; font-size: 1.1rem; font-weight: 700; margin: 0 0 1rem 0;">Our Services</h4>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                    <a href="services.html#armed-response" style="color: #98999E; text-decoration: none; font-size: 0.95rem;">Armed Response</a>
+                    <a href="services.html#security-guarding" style="color: #98999E; text-decoration: none; font-size: 0.95rem;">Security Guarding</a>
+                    <a href="services.html#event-security" style="color: #98999E; text-decoration: none; font-size: 0.95rem;">Event Security</a>
+                    <a href="services.html#bodyguard" style="color: #98999E; text-decoration: none; font-size: 0.95rem;">Personal Bodyguards</a>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 style="color: #E0E0E0; font-size: 1.1rem; font-weight: 700; margin: 0 0 1rem 0;">Contact</h4>
+
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <i class="fas fa-phone" style="font-size: 20px; color: #98999E; width: 20px;"></i>
+                        <a href="tel:0671603859" style="color: #98999E; text-decoration: none; font-size: 0.95rem;">0671603859</a>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <i class="fas fa-map-marker-alt" style="font-size: 20px; color: #98999E; width: 20px;"></i>
+                        <span style="color: #98999E; font-size: 0.95rem;">Boksburg North</span>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div style="margin-top: 1.5rem;">
+                    <h5 style="color: #E0E0E0; font-size: 0.95rem; font-weight: 600; margin: 0 0 0.75rem 0;">Follow Us</h5>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="https://facebook.com" target="_blank" style="width: 40px; height: 40px; background-color: rgba(224,224,224,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #E0E0E0;">
+                            <i class="fab fa-facebook-f" style="font-size: 18px;"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" style="width: 40px; height: 40px; background-color: rgba(224,224,224,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #E0E0E0;">
+                            <i class="fab fa-twitter" style="font-size: 18px;"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" style="width: 40px; height: 40px; background-color: rgba(224,224,224,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #E0E0E0;">
+                            <i class="fab fa-instagram" style="font-size: 18px;"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" style="width: 40px; height: 40px; background-color: rgba(224,224,224,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #E0E0E0;">
+                            <i class="fab fa-linkedin-in" style="font-size: 18px;"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div style="border-top: 1px solid rgba(224,224,224,0.1); padding-top: 2rem; text-align: center;">
+            <p id="footer-text" style="color: #98999E; margin: 0; font-size: 0.95rem;">
+                © 2024 Shield-Line Security. All rights reserved.
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+  </div>
+  <script>
+    const defaultConfig = {
+      background_color: '#101E43',
+      secondary_surface_color: '#ffffff',
+      text_color: '#101E43',
+      primary_action_color: '#E0E0E0',
+      secondary_action_color: '#CFD0D2',
+      font_family: 'Inter',
+      font_size: 16,
+      company_name: 'Shield-Line Security',
+      tagline: 'Your safety, Our line of defense.',
+      hero_title: 'Professional Security Solutions',
+      hero_subtitle: '24/7 Protection You Can Trust',
+      cta_button: 'Get Protected Today',
+      about_title: 'About Shield-Line Security',
+      about_description: 'With years of experience in the security industry, Shield-Line Security provides comprehensive protection services across Boksburg and surrounding areas. Our highly trained personnel are equipped to handle any security challenge, from residential protection to large-scale event management. We pride ourselves on our rapid response times, professional conduct, and unwavering commitment to keeping our clients safe 24/7.',
+      core_services_title: 'Our Core Services',
+      service_1_title: 'Armed Response',
+      service_1_desc: 'Rapid armed response teams available 24/7 to protect your property and loved ones with immediate action.',
+      service_2_title: 'Security Guarding',
+      service_2_desc: 'Professional, trained security guards for your business premises, events, and residential properties.',
+      service_3_title: 'Risk Assessment',
+      service_3_desc: 'Comprehensive security evaluations to identify vulnerabilities and create tailored protection plans.',
+      specialized_title: 'Specialized Security Services',
+      event_title: 'Event Security',
+      event_desc: 'Comprehensive security planning and crowd control for concerts, festivals, weddings, and corporate events.',
+      bouncers_title: 'Bouncers & Doormen',
+      bouncers_desc: 'Professional crowd management and entrance screening for clubs, bars, and private venues.',
+      bodyguard_title: 'Personal Bodyguards',
+      bodyguard_desc: 'Trusted close-protection officers for VIPs, executives, and high-profile individuals — discreet and dependable.',
+      escort_title: 'Escort Services',
+      escort_desc: 'Discreet personal or VIP escorts for safe travel between venues, events, or destinations.',
+      surveillance_title: 'Surveillance & Patrols',
+      surveillance_desc: 'Regular patrols and real-time CCTV monitoring to prevent incidents before they occur.',
+      incident_title: 'Incident Response',
+      incident_desc: 'Rapid, trained responses to disturbances or threats during any event or protection detail.',
+      contact_title: 'Contact Us',
+      phone_number: '0671603859',
+      address: 'BOKSBURG NORTH',
+      footer_text: '© 2024 Shield-Line Security. All rights reserved.'
+    };
+
+    async function onConfigChange(config) {
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseSize = config.font_size || defaultConfig.font_size;
+      const baseFontStack = 'Inter, Segoe UI, system-ui, -apple-system, sans-serif';
+      
+      // Apply colors
+      const header = document.getElementById('header');
+      header.style.backgroundColor = config.background_color || defaultConfig.background_color;
+      
+      const heroSection = document.querySelector('.hero-gradient');
+      const bgColor = config.background_color || defaultConfig.background_color;
+      heroSection.style.background = `linear-gradient(135deg, ${bgColor} 0%, ${bgColor}dd 100%)`;
+      
+      const serviceCards = document.querySelectorAll('.service-card');
+      serviceCards.forEach(card => {
+        card.style.backgroundColor = config.secondary_surface_color || defaultConfig.secondary_surface_color;
+      });
+      
+      const serviceIcons = document.querySelectorAll('.service-card > div');
+      serviceIcons.forEach(icon => {
+        icon.style.backgroundColor = config.background_color || defaultConfig.background_color;
+      });
+      
+      const contactSection = document.querySelector('section[style*="padding: 5rem 2rem; background-color: #101E43"]');
+      contactSection.style.backgroundColor = config.background_color || defaultConfig.background_color;
+      
+      const ctaButtons = document.querySelectorAll('#cta-button, .phone-link');
+      ctaButtons.forEach(btn => {
+        btn.style.backgroundColor = config.primary_action_color || defaultConfig.primary_action_color;
+        btn.style.color = config.background_color || defaultConfig.background_color;
+      });
+      
+      const serviceTitles = document.querySelectorAll('#service-1-title, #service-2-title, #service-3-title');
+      serviceTitles.forEach(title => {
+        title.style.color = config.text_color || defaultConfig.text_color;
+      });
+      
+      document.getElementById('core-services-title').style.color = config.text_color || defaultConfig.text_color;
+      document.getElementById('specialized-title').style.color = config.text_color || defaultConfig.text_color;
+      
+      const specializedTitles = document.querySelectorAll('#event-title, #bouncers-title, #bodyguard-title, #escort-title, #surveillance-title, #incident-title');
+      specializedTitles.forEach(title => {
+        title.style.color = config.primary_action_color || defaultConfig.primary_action_color;
+      });
+      
+      const specializedCards = document.querySelectorAll('.specialized-card');
+      specializedCards.forEach((card, index) => {
+        // All 6 cards use the same dark background styling
+        card.style.backgroundColor = config.background_color || defaultConfig.background_color;
+        
+        // Update title color
+        const title = card.querySelector('h3');
+        if (title) {
+          title.style.color = config.primary_action_color || defaultConfig.primary_action_color;
+        }
+        
+        // Update description color
+        const description = card.querySelector('p[id$="-desc"]');
+        if (description) {
+          description.style.color = config.secondary_action_color || defaultConfig.secondary_action_color;
+        }
+        
+        // Update border color
+        const borderDiv = card.querySelector('div[style*="border-top"]');
+        if (borderDiv) {
+          borderDiv.style.borderTop = '1px solid rgba(224, 224, 224, 0.2)';
+        }
+        
+        // Update bullet colors
+        const bullets = card.querySelectorAll('.checkmark');
+        bullets.forEach(bullet => {
+          bullet.style.color = config.primary_action_color || defaultConfig.primary_action_color;
+        });
+        
+        // Update feature text colors
+        const featureTexts = card.querySelectorAll('.feature-item span:not(.checkmark)');
+        featureTexts.forEach(text => {
+          text.style.color = config.secondary_action_color || defaultConfig.secondary_action_color;
+        });
+      });
+      
+      // Apply fonts
+      document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      
+      const companyNameEl = document.getElementById('company-name');
+      companyNameEl.style.fontSize = `${baseSize * 1.75}px`;
+      companyNameEl.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      
+      const taglineEl = document.getElementById('tagline');
+      taglineEl.style.fontSize = `${baseSize * 0.9}px`;
+      taglineEl.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      
+      const heroTitle = document.getElementById('hero-title');
+      heroTitle.style.fontSize = `${baseSize * 3.5}px`;
+      heroTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      
+      const heroSubtitle = document.getElementById('hero-subtitle');
+      heroSubtitle.style.fontSize = `${baseSize * 1.4}px`;
+      heroSubtitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      
+      const aboutTitle = document.getElementById('about-title');
+      aboutTitle.style.fontSize = `${baseSize * 2.75}px`;
+      aboutTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      
+      const aboutDescription = document.getElementById('about-description');
+      aboutDescription.style.fontSize = `${baseSize * 1.15}px`;
+      aboutDescription.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      
+      const coreServicesTitle = document.getElementById('core-services-title');
+      coreServicesTitle.style.fontSize = `${baseSize * 2.75}px`;
+      coreServicesTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      
+      const specializedTitle = document.getElementById('specialized-title');
+      specializedTitle.style.fontSize = `${baseSize * 2.75}px`;
+      specializedTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      
+      const contactTitle = document.getElementById('contact-title');
+      contactTitle.style.fontSize = `${baseSize * 2.75}px`;
+      contactTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      
+      // Update text content
+      document.getElementById('company-name').textContent = config.company_name || defaultConfig.company_name;
+      document.getElementById('tagline').textContent = config.tagline || defaultConfig.tagline;
+      document.getElementById('hero-title').textContent = config.hero_title || defaultConfig.hero_title;
+      document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      document.getElementById('cta-button').textContent = config.cta_button || defaultConfig.cta_button;
+      document.getElementById('about-title').textContent = config.about_title || defaultConfig.about_title;
+      document.getElementById('about-description').textContent = config.about_description || defaultConfig.about_description;
+      document.getElementById('core-services-title').textContent = config.core_services_title || defaultConfig.core_services_title;
+      document.getElementById('service-1-title').textContent = config.service_1_title || defaultConfig.service_1_title;
+      document.getElementById('service-1-desc').textContent = config.service_1_desc || defaultConfig.service_1_desc;
+      document.getElementById('service-2-title').textContent = config.service_2_title || defaultConfig.service_2_title;
+      document.getElementById('service-2-desc').textContent = config.service_2_desc || defaultConfig.service_2_desc;
+      document.getElementById('service-3-title').textContent = config.service_3_title || defaultConfig.service_3_title;
+      document.getElementById('service-3-desc').textContent = config.service_3_desc || defaultConfig.service_3_desc;
+      document.getElementById('specialized-title').textContent = config.specialized_title || defaultConfig.specialized_title;
+      document.getElementById('event-title').textContent = config.event_title || defaultConfig.event_title;
+      document.getElementById('event-desc').textContent = config.event_desc || defaultConfig.event_desc;
+      document.getElementById('bouncers-title').textContent = config.bouncers_title || defaultConfig.bouncers_title;
+      document.getElementById('bouncers-desc').textContent = config.bouncers_desc || defaultConfig.bouncers_desc;
+      document.getElementById('bodyguard-title').textContent = config.bodyguard_title || defaultConfig.bodyguard_title;
+      document.getElementById('bodyguard-desc').textContent = config.bodyguard_desc || defaultConfig.bodyguard_desc;
+      document.getElementById('escort-title').textContent = config.escort_title || defaultConfig.escort_title;
+      document.getElementById('escort-desc').textContent = config.escort_desc || defaultConfig.escort_desc;
+      document.getElementById('surveillance-title').textContent = config.surveillance_title || defaultConfig.surveillance_title;
+      document.getElementById('surveillance-desc').textContent = config.surveillance_desc || defaultConfig.surveillance_desc;
+      document.getElementById('incident-title').textContent = config.incident_title || defaultConfig.incident_title;
+      document.getElementById('incident-desc').textContent = config.incident_desc || defaultConfig.incident_desc;
+      document.getElementById('contact-title').textContent = config.contact_title || defaultConfig.contact_title;
+      document.getElementById('header-phone').textContent = config.phone_number || defaultConfig.phone_number;
+      document.getElementById('contact-phone').textContent = config.phone_number || defaultConfig.phone_number;
+      document.getElementById('address').textContent = config.address || defaultConfig.address;
+      document.getElementById('footer-text').textContent = config.footer_text || defaultConfig.footer_text;
+      
+      // Update phone links
+      const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+      phoneLinks.forEach(link => {
+        link.href = `tel:${config.phone_number || defaultConfig.phone_number}`;
+      });
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.secondary_surface_color || defaultConfig.secondary_surface_color,
+            set: (value) => {
+              config.secondary_surface_color = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ secondary_surface_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              config.primary_action_color = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ primary_action_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => {
+              config.secondary_action_color = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ secondary_action_color: value });
+              }
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            if (window.elementSdk) {
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            config.font_size = value;
+            if (window.elementSdk) {
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ['company_name', config.company_name || defaultConfig.company_name],
+        ['tagline', config.tagline || defaultConfig.tagline],
+        ['hero_title', config.hero_title || defaultConfig.hero_title],
+        ['hero_subtitle', config.hero_subtitle || defaultConfig.hero_subtitle],
+        ['cta_button', config.cta_button || defaultConfig.cta_button],
+        ['about_title', config.about_title || defaultConfig.about_title],
+        ['about_description', config.about_description || defaultConfig.about_description],
+        ['core_services_title', config.core_services_title || defaultConfig.core_services_title],
+        ['service_1_title', config.service_1_title || defaultConfig.service_1_title],
+        ['service_1_desc', config.service_1_desc || defaultConfig.service_1_desc],
+        ['service_2_title', config.service_2_title || defaultConfig.service_2_title],
+        ['service_2_desc', config.service_2_desc || defaultConfig.service_2_desc],
+        ['service_3_title', config.service_3_title || defaultConfig.service_3_title],
+        ['service_3_desc', config.service_3_desc || defaultConfig.service_3_desc],
+        ['specialized_title', config.specialized_title || defaultConfig.specialized_title],
+        ['event_title', config.event_title || defaultConfig.event_title],
+        ['event_desc', config.event_desc || defaultConfig.event_desc],
+        ['bouncers_title', config.bouncers_title || defaultConfig.bouncers_title],
+        ['bouncers_desc', config.bouncers_desc || defaultConfig.bouncers_desc],
+        ['bodyguard_title', config.bodyguard_title || defaultConfig.bodyguard_title],
+        ['bodyguard_desc', config.bodyguard_desc || defaultConfig.bodyguard_desc],
+        ['escort_title', config.escort_title || defaultConfig.escort_title],
+        ['escort_desc', config.escort_desc || defaultConfig.escort_desc],
+        ['surveillance_title', config.surveillance_title || defaultConfig.surveillance_title],
+        ['surveillance_desc', config.surveillance_desc || defaultConfig.surveillance_desc],
+        ['incident_title', config.incident_title || defaultConfig.incident_title],
+        ['incident_desc', config.incident_desc || defaultConfig.incident_desc],
+        ['contact_title', config.contact_title || defaultConfig.contact_title],
+        ['phone_number', config.phone_number || defaultConfig.phone_number],
+        ['address', config.address || defaultConfig.address],
+        ['footer_text', config.footer_text || defaultConfig.footer_text]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    // Hero Slider
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    function changeSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      indicators[currentSlide].classList.remove('active');
+      currentSlide = index;
+      slides[currentSlide].classList.add('active');
+      indicators[currentSlide].classList.add('active');
+    }
+    
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      changeSlide(next);
+    }
+    
+    // Auto-advance slides every 5 seconds
+    setInterval(nextSlide, 5000);
+    
+    // Click indicators to change slides
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => changeSlide(index));
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all service cards
+    document.querySelectorAll('.service-card').forEach(card => {
+      observer.observe(card);
+    });
+
+    // Observe specialized cards
+    document.querySelectorAll('.specialized-card').forEach(card => {
+      observer.observe(card);
+    });
+
+    // Observe fade-in elements
+    document.querySelectorAll('.fade-in').forEach(element => {
+      observer.observe(element);
+    });
+
+    // Mobile menu functionality
+    const openSidebarBtn = document.getElementById('openSidebar');
+    const closeSidebarBtn = document.getElementById('closeSidebar');
+    const mobileSidebar = document.getElementById('mobileSidebar');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+
+    function openMobileMenu() {
+      mobileSidebar.classList.add('open');
+      mobileOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+      mobileSidebar.classList.remove('open');
+      mobileOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    openSidebarBtn.addEventListener('click', openMobileMenu);
+    closeSidebarBtn.addEventListener('click', closeMobileMenu);
+    mobileOverlay.addEventListener('click', closeMobileMenu);
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.mobile-sidebar-nav a').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Contact form functionality
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        service: document.getElementById('service').value,
+        message: document.getElementById('message').value
+      };
+
+      // Create WhatsApp message
+      const whatsappNumber = '27671603859'; // Format: country code + number without +
+      const whatsappMessage = `New Security Inquiry from Website:\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\n\nMessage:\n${formData.message}`;
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+      // Open WhatsApp in new tab
+      window.open(whatsappURL, '_blank');
+
+      // Show success message
+      formMessage.style.display = 'block';
+      formMessage.style.backgroundColor = 'rgba(34, 197, 94, 0.2)';
+      formMessage.style.color = '#4ade80';
+      formMessage.textContent = 'Opening WhatsApp to send your inquiry...';
+
+      // Reset form
+      contactForm.reset();
+
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        formMessage.style.display = 'none';
+      }, 5000);
+    });
+
+    // Input focus effects
+    const formInputs = document.querySelectorAll('#contactForm input, #contactForm select, #contactForm textarea');
+    formInputs.forEach(input => {
+      input.addEventListener('focus', function() {
+        this.style.borderColor = 'rgba(224, 224, 224, 0.5)';
+      });
+      input.addEventListener('blur', function() {
+        this.style.borderColor = 'rgba(224, 224, 224, 0.2)';
+      });
+    });
+
+    // Footer link hover effects
+    const footerLinks = document.querySelectorAll('footer a');
+    footerLinks.forEach(link => {
+      link.addEventListener('mouseenter', function() {
+        this.style.color = '#E0E0E0';
+      });
+      link.addEventListener('mouseleave', function() {
+        this.style.color = '#98999E';
+      });
+    });
+
+    // Social icon hover effects
+    const socialIcons = document.querySelectorAll('footer a[target="_blank"]');
+    socialIcons.forEach(icon => {
+      icon.addEventListener('mouseenter', function() {
+        this.style.backgroundColor = 'rgba(224, 224, 224, 0.2)';
+        this.style.transform = 'translateY(-3px)';
+      });
+      icon.addEventListener('mouseleave', function() {
+        this.style.backgroundColor = 'rgba(224, 224, 224, 0.1)';
+        this.style.transform = 'translateY(0)';
+      });
+    });
+
+  </script>
+  <script>
+/* hero : zoom & centre-crop on mobile , normal cover on desktop */
+(function(){
+  function setHeroBg(){
+    document.querySelectorAll('.hero-slide').forEach(slide => {
+      const img = slide.dataset.bg;
+      slide.style.backgroundImage = `url(${img})`;
+      slide.style.backgroundSize   = 'cover';
+      slide.style.backgroundRepeat = 'no-repeat';
+      slide.style.backgroundPosition = 'center center';
+    });
+  }
+  setHeroBg();
+  window.addEventListener('resize', setHeroBg);
+})();
+</script>
+ </body>
+</html>
